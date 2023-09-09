@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color:  black; color: white ;">
+    <ul class="language">
+        <li>javascript</li>
+    </ul>
+</body>
+<script>
+    //INsert
+    function addlanguage(langName){
+        const li = document.createElement('li');
+        li.innerHTML =`${langName}`
+
+        document.querySelector('.language').appendChild(li);
+    }
+
+    //call the fxn 
+    addlanguage("python");
+    addlanguage("java");
+
+    //optimise approch 
+    function addoptimiseLanguage(langName){
+        const li = document.createElement('li');
+        li.appendChild(Document.createTextNode(langName));
+
+        Document.querySelector('.language').appendChild(li)
+    }
+    addoptimiseLanguage("Go_Lang");
+    //-----------------------**************************
+    //Edit any value
+      
+      const secondLang = document.querySelector("li:nth-child(2)")
+      //secondLang.innerHTML="Mojo";    
+       //----------optimise approch
+      const  newli = document.createElement('.li');
+      newli.textContent = "Mojo";
+      secondLang.replaceWith(newli);
+
+      //---------------****************
+      //REMOVE
+      const lastLang = document.querySelector('li:last-child')
+       lastLang.remove();
+
+</script>
+</html>
