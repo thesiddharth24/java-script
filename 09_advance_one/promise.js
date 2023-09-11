@@ -61,21 +61,52 @@ promise4
 })
 */
 
-const promise5 = new Promise(function(resolve,reject){
-    setTimeout(function(){
-        let err = false
-        if(!err){
-            resolve({username:"java script",password:"123"});
-        }else{
-            reject(`ERROR: JS went wrong`)
-        }
-    },1000)
+// const promise5 = new Promise(function(resolve,reject){
+//     setTimeout(function(){
+//         let err = false
+//         if(!err){
+//             resolve({username:"java script",password:"123"});
+//         }else{
+//             reject(`ERROR: JS went wrong`)
+//         }
+//     },1000)
+// })
+// //promise5 ek object hai 
+// async function consumePromise5(){
+//     try{
+//         const response = await promise5
+//         console.log(response)
+//     }catch(err){
+//         console.log(err);
+//     }
+    
+// }
+
+// consumePromise5()
+
+
+// async function getAllUsers(){
+//     try {
+//         //fetch is an object now a days 
+//         const response = await fetch('https://jsonplaceholder.typicode.com/users')
+//        // console.log(response);
+//         const data = await response.json()
+//         console.log(data);
+//     } catch (error) {
+//         console.log(`YOu got an err`,error);
+//     }
+    
+// }
+
+// getAllUsers()
+//fetch kuch return nahi karega 
+fetch('https://jsonplaceholder.typicode.com/users').then((response)=>{
+    return response.json();
 })
-//promise5 ek object hai 
-async function consumePromise5(){
-    const response = await promise5
-    console.log()
-}
+.then((data)=>{
+    console.log(data);
+})
+.catch((err)=>{
+    console.log('You got an err : ',err);
+});
 
-
-as
