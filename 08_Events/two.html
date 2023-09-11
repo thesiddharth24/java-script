@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>SIddharth</h1>
+    <button id="stop">~STOP~</button>
+</body>
+<script>
+    // setTimeout(function(){
+    //     console.log('Siddharth');
+    // },2000)
+    const saySidd = function(){
+        console.log('Siddharth');
+    };
+    const defOfName = setTimeout(saySidd,2000)
+
+    // cleartime out task queue se hata dega set timeout fxn mainly esko hm event pe lagate hai
+    // clearTimeout(defOfName)
+
+
+    document.querySelector('#stop').addEventListener('click',function(e){
+        clearTimeout(defOfName);
+        console.log("stopped !!");
+    })
+
+    
+</script>
+</html>

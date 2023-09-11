@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>SIddharth</h1>
+    <button id="start">~START~</button>
+    <button id="stop">~STOP~</button>
+</body>
+<script>
+    let sayDate = function(str){
+       console.log(str,Date.now())
+    }
+   
+    // //start pe jake start ho jaye 
+    let invalidID;
+    document.querySelector('#start').addEventListener('click',function(e){
+        if(!invalidID){
+        invalidID =  setInterval(sayDate,1000,"siddharth");;
+        }
+        console.log("Printing of date has started!!")
+    })
+    const stopfxn = function(){
+        console.log("Printing of date is stopped!!")
+        console.log("Plese refresh the page to restart")
+        clearInterval(invalidID);
+        invalidID = NULL;
+    }
+//    //stop pe jake stop ho jaye 
+   document.querySelector('#stop').addEventListener('click',stopfxn)
+
+//     clearInterval(intervalId);
+
+
+
+    
+</script>
+</html>
