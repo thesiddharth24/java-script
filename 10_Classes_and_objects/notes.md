@@ -22,7 +22,7 @@
    -Array is a object - object pattern null hia 
    -so we can say string bhi object hai then object null 
    -So we can say that in JS almost everything is a object 
-
+   -fxn bhi object hai or fxn bhi hai 
 -Classes
 -Instances
 
