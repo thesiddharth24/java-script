@@ -6,7 +6,7 @@ function setUsername(username){
 
 function createUser(username,email,password){
     //setUsername(username);//ye abhi call nahi hua hai 
-    setUsername.call(username);//.call se refrence hold kark rakega 
+    setUsername.call(this,username);//.call se refrence hold kark rakega 
     this.email = email;
     this.password = password;
 }
